@@ -35,9 +35,20 @@ final class MainPresenterTest: XCTestCase {
 
     func testModuleIsNotNil() {
         XCTAssertNotNil(view, "view is not nil")
+        XCTAssertNotNil(person, "person is not nil")
+        XCTAssertNotNil(presenter, "presenter is not nil")
     }
     
+    func testView() {
+        presenter.showGreeting()
+        XCTAssertEqual(view.titleTest, "Baz Bar")
+    }
 
 
+    func testPersonModel() {
+        XCTAssertEqual(person.firstName, "Baz")
+        XCTAssertEqual(person.lastName, "Bar")
+    }
 
+    
 }
