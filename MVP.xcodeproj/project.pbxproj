@@ -20,6 +20,7 @@
 		2A89ABB92C0DF24900F80BE2 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A89ABB82C0DF24900F80BE2 /* MainPresenter.swift */; };
 		2A89ABBF2C0E445300F80BE2 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A89ABBE2C0E445300F80BE2 /* MainViewController.xib */; };
 		2A89ABC12C0E45AC00F80BE2 /* ModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A89ABC02C0E45AC00F80BE2 /* ModelBuilder.swift */; };
+		2A89ABC62C0ED22E00F80BE2 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A89ABC52C0ED22E00F80BE2 /* MainPresenterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		2A89ABB82C0DF24900F80BE2 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		2A89ABBE2C0E445300F80BE2 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		2A89ABC02C0E45AC00F80BE2 /* ModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelBuilder.swift; sourceTree = "<group>"; };
+		2A89ABC52C0ED22E00F80BE2 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				2A89AB9D2C0CD6BB00F80BE2 /* MVPTests.swift */,
+				2A89ABC42C0ED1E200F80BE2 /* MainModuleTest */,
 			);
 			path = MVPTests;
 			sourceTree = "<group>";
@@ -169,6 +172,14 @@
 				2A89ABB82C0DF24900F80BE2 /* MainPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2A89ABC42C0ED1E200F80BE2 /* MainModuleTest */ = {
+			isa = PBXGroup;
+			children = (
+				2A89ABC52C0ED22E00F80BE2 /* MainPresenterTest.swift */,
+			);
+			path = MainModuleTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A89AB9E2C0CD6BB00F80BE2 /* MVPTests.swift in Sources */,
+				2A89ABC62C0ED22E00F80BE2 /* MainPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
