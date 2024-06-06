@@ -16,11 +16,12 @@
 		2A89AB9E2C0CD6BB00F80BE2 /* MVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A89AB9D2C0CD6BB00F80BE2 /* MVPTests.swift */; };
 		2A89ABA82C0CD6BB00F80BE2 /* MVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A89ABA72C0CD6BB00F80BE2 /* MVPUITests.swift */; };
 		2A89ABAA2C0CD6BB00F80BE2 /* MVPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A89ABA92C0CD6BB00F80BE2 /* MVPUITestsLaunchTests.swift */; };
-		2A89ABB72C0CD77400F80BE2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A89ABB62C0CD77400F80BE2 /* Person.swift */; };
+		2A89ABB72C0CD77400F80BE2 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A89ABB62C0CD77400F80BE2 /* Comment.swift */; };
 		2A89ABB92C0DF24900F80BE2 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A89ABB82C0DF24900F80BE2 /* MainPresenter.swift */; };
 		2A89ABBF2C0E445300F80BE2 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A89ABBE2C0E445300F80BE2 /* MainViewController.xib */; };
 		2A89ABC12C0E45AC00F80BE2 /* ModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A89ABC02C0E45AC00F80BE2 /* ModelBuilder.swift */; };
 		2A89ABC62C0ED22E00F80BE2 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A89ABC52C0ED22E00F80BE2 /* MainPresenterTest.swift */; };
+		2A89ABC92C0F709900F80BE2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A89ABC82C0F709900F80BE2 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +55,12 @@
 		2A89ABA32C0CD6BB00F80BE2 /* MVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A89ABA72C0CD6BB00F80BE2 /* MVPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPUITests.swift; sourceTree = "<group>"; };
 		2A89ABA92C0CD6BB00F80BE2 /* MVPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2A89ABB62C0CD77400F80BE2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		2A89ABB62C0CD77400F80BE2 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		2A89ABB82C0DF24900F80BE2 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		2A89ABBE2C0E445300F80BE2 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		2A89ABC02C0E45AC00F80BE2 /* ModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelBuilder.swift; sourceTree = "<group>"; };
 		2A89ABC52C0ED22E00F80BE2 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
+		2A89ABC82C0F709900F80BE2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,12 +113,13 @@
 			children = (
 				2A89AB862C0CD6BA00F80BE2 /* AppDelegate.swift */,
 				2A89AB882C0CD6BA00F80BE2 /* SceneDelegate.swift */,
+				2A89ABC02C0E45AC00F80BE2 /* ModelBuilder.swift */,
 				2A89ABBA2C0E436800F80BE2 /* MainModule */,
+				2A89ABCA2C0F70BB00F80BE2 /* ServiceLayer */,
 				2A89AB8C2C0CD6BA00F80BE2 /* Main.storyboard */,
 				2A89AB8F2C0CD6BB00F80BE2 /* Assets.xcassets */,
 				2A89AB912C0CD6BB00F80BE2 /* LaunchScreen.storyboard */,
 				2A89AB942C0CD6BB00F80BE2 /* Info.plist */,
-				2A89ABC02C0E45AC00F80BE2 /* ModelBuilder.swift */,
 			);
 			path = MVP;
 			sourceTree = "<group>";
@@ -161,7 +164,7 @@
 		2A89ABBC2C0E43AB00F80BE2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2A89ABB62C0CD77400F80BE2 /* Person.swift */,
+				2A89ABB62C0CD77400F80BE2 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +183,14 @@
 				2A89ABC52C0ED22E00F80BE2 /* MainPresenterTest.swift */,
 			);
 			path = MainModuleTest;
+			sourceTree = "<group>";
+		};
+		2A89ABCA2C0F70BB00F80BE2 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2A89ABC82C0F709900F80BE2 /* NetworkService.swift */,
+			);
+			path = ServiceLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,9 +328,10 @@
 				2A89ABB92C0DF24900F80BE2 /* MainPresenter.swift in Sources */,
 				2A89AB8B2C0CD6BA00F80BE2 /* MainViewController.swift in Sources */,
 				2A89AB872C0CD6BA00F80BE2 /* AppDelegate.swift in Sources */,
-				2A89ABB72C0CD77400F80BE2 /* Person.swift in Sources */,
+				2A89ABB72C0CD77400F80BE2 /* Comment.swift in Sources */,
 				2A89AB892C0CD6BA00F80BE2 /* SceneDelegate.swift in Sources */,
 				2A89ABC12C0E45AC00F80BE2 /* ModelBuilder.swift in Sources */,
+				2A89ABC92C0F709900F80BE2 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

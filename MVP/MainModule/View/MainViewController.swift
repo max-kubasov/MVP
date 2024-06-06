@@ -9,26 +9,49 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var greetingLabel: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     
     var presenter: MainViewPresenterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //view.backgroundColor = .gray
-    }
-
-    @IBAction func didTapButtonAction(_ sender: Any) {
-        self.presenter.showGreeting()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.dataSource = self
+        tableView.delegate = self
     }
 }
 
-extension MainViewController: MainViewProtocol {
-    func setGreeting(greeting: String) {
-        self.greetingLabel.text = greeting
+extension MainViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(presenter.comments?.count)
+        return presenter.comments?.count ?? 0
+        
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let comment = presenter.comments?[indexPath.row]
+        cell.textLabel?.text = comment?.body
+        return cell
+    }
+    
+    
+}
+
+extension MainViewController: UITableViewDelegate {
+    
+}
+
+extension MainViewController: MainViewProtocol {
+    func succes() {
+        tableView.reloadData()
+    }
+    
+    func failure(error: any Error) {
+        print(error.localizedDescription)
+    }
     
 }
 
