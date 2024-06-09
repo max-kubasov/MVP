@@ -25,7 +25,6 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(presenter.comments?.count)
         return presenter.comments?.count ?? 0
         
     }
