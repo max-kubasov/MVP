@@ -23,6 +23,14 @@ class MainViewController: UIViewController {
     }
 }
 
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let comment = presenter.comments?[indexPath.row]
+        let detailViewController = ModelBuilder.createDetailModule(comment: comment)
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
+}
+
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.comments?.count ?? 0
@@ -36,10 +44,6 @@ extension MainViewController: UITableViewDataSource {
         return cell
     }
     
-    
-}
-
-extension MainViewController: UITableViewDelegate {
     
 }
 
