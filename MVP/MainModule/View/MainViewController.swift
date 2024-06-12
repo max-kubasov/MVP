@@ -26,8 +26,8 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let comment = presenter.comments?[indexPath.row]
-        let detailViewController = ModelBuilder.createDetailModule(comment: comment)
-        navigationController?.pushViewController(detailViewController, animated: true)
+        presenter.tapOnComment(comment: comment)
+
     }
 }
 
