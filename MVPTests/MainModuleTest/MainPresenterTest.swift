@@ -79,6 +79,7 @@ final class MainPresenterTest: XCTestCase {
         }
         
         XCTAssertNotEqual(catchComments?.count, 0)
+        XCTAssertEqual(catchComments?.count, comments.count)
     }
 
     
